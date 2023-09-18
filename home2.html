@@ -10,27 +10,42 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="help.html">Help</a></li>
-            <li><a href="#">profile</a></li>
-            <li><a href="login2.html">Login/SignUp</a></li>
-            <li><a href="scan.html">Scan</a></li>
-        </ul>
-    </nav>
+   
+  <nav>
+    <ul>
+      <li class="navbar-title" id="navbar-title">AyurVriksha</li>
+
+        <li><a href="home2.html">Home</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="login2.html">Login/SignUp</a></li>
+        <li><a href="scan.html">Scan</a></li>
+       
+    </ul>
+</nav>
+
 
     <!-- Main Content -->
     <div class="container">
         <!-- Text Container -->
-        <div class="logo"><img src="images/logo.jpg" style="height:100px; width:100px; border-radius: 80%;"></div>
+         <div class="logo"><img src="images/logo.jpg" style="height:100px; width:100px; border-radius: 80%;"></div> 
         
         <div class="text">
             <h1>प्राकृत्या औषधि ज्ञानम् जीवने</h1>
             <p>Unlocking the Knowledge of Herbal Medicine in Life</p>
           </div>
         </div>
+         <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',  // The original language of your webpage
+                includedLanguages: 'gu,hi,ta,kn,mr,pa,bn,en',  // Languages to translate into (Marathi, Hindi, French, German)
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     
     
     <!-- Slideshow Container -->
@@ -102,7 +117,7 @@
         <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
           <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-card">
-              <img src="siddhi.jpg" alt="Siddhi" style="width:100%">
+              
               <div class="w3-container">
                 <h3>Siddhi Suryawanshi</h3>
                 <p class="w3-opacity">Front-end Developer</p>
@@ -113,7 +128,7 @@
           </div>
           <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-card">
-              <img src="#" alt="Sakshi" style="width:100%">
+             
               <div class="w3-container">
                 <h3>Sakshi Pawar</h3>
                 <p class="w3-opacity">Back-end Developer</p>
@@ -124,7 +139,7 @@
           </div>
           <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-card">
-              <img src="#" alt="Pratik" style="width:100%">
+              
               <div class="w3-container">
                 <h3>Pratik Dake</h3>
                 <p class="w3-opacity">Back-end Developer</p>
@@ -135,7 +150,7 @@
           </div>
           <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-card">
-              <img src="#" alt="Rutuja" style="width:100%">
+              
               <div class="w3-container">
                 <h3>Rutuja Ahire</h3>
                 <p class="w3-opacity">Back-end Developer</p>
@@ -146,7 +161,7 @@
           </div>
           <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-card">
-              <img src="#" alt="Pratik" style="width:100%">
+              
               <div class="w3-container">
                 <h3>Anushka Phadtare</h3>
                 <p class="w3-opacity">Front-end Developer</p>
@@ -157,7 +172,7 @@
           </div>
           <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-card">
-              <img src="#" alt="Atharav" style="width:100%">
+
               <div class="w3-container">
                 <h3>Atharav Agale</h3>
                 <p class="w3-opacity">Front-end Developer</p>
@@ -168,19 +183,52 @@
           </div>
         </div>
         
+
         <!-- Footer -->
         <footer class="w3-center w3-black w3-padding-64">
-          <a href="home.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+          <a href="home2.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
           <div class="w3-xlarge w3-section">
             <i class="fa fa-facebook-official w3-hover-opacity"></i>
             <i class="fa fa-instagram w3-hover-opacity"></i>
             <i class="fa fa-twitter w3-hover-opacity"></i>
             <i class="fa fa-linkedin w3-hover-opacity"></i>
           </div>
+          
+       
+    
         </footer>
         
 
     <script src="home.js"></script>
-    <script src="//code.tidio.co/u1gkjqird81jur9mb9wzzfjk2rtstjfl.js" async></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1">
+      <div id="df-messenger"></div>
+    </script>
+
+  
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+          const dfMessenger = document.querySelector('#df-messenger');
+          dfMessenger.setAttribute('df-cx', 'YOUR_PROJECT_ID');
+      });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const title = document.getElementById("navbar-title");
+        const text = title.textContent;
+        title.textContent = "";
+
+        function typeText(i) {
+            if (i <= text.length) {
+                title.textContent = text.substr(0, i);
+                setTimeout(function () {
+                    typeText(i + 1);
+                }, 100); // Adjust the typing speed here (e.g., 100 milliseconds)
+            }
+        }
+
+        typeText(0);
+    });
+</script>
+<script src="//code.tidio.co/u1gkjqird81jur9mb9wzzfjk2rtstjfl.js" async></script>
 </body>
 </html>

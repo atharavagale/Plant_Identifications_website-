@@ -5,6 +5,39 @@ body, ul {
 }
 
 /* Style the navigation bar */
+/* CSS for Writing Animation on Navbar Title */
+/* CSS for Writing Animation on Navbar Title */
+.navbar-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.8rem;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+}
+
+/* Define the keyframes for the writing animation */
+@keyframes writeAnimation {
+    0% {
+        width: 0; /* Start with no width (hidden) */
+    }
+    100% {
+        width: auto; /* Expand to full width (reveal) */
+    }
+}
+
+/* Apply the animation to the navbar title */
+.navbar-title::before {
+     /* Add your title text here */
+     
+    display: inline-block;
+    vertical-align: bottom; /* Align with the text */
+    width: 0; /* Start with no width (hidden) */
+    animation: writeAnimation 3s steps(20, end) forwards; /* Animation duration and steps */
+}
+
 nav {
     background-color: #458307;
     padding: 10px 0;
@@ -38,7 +71,7 @@ nav a {
 }
 .logo
 {
-  margin-right: 40px;
+  margin-right: 0px;
   height: 100px;
   width: 100px;
   margin-left:60px;
@@ -92,3 +125,22 @@ p {
         opacity: 1;
     }
 }
+@media screen and (min-width: 768px) {
+    nav li {
+        margin: 0 20px; /* Restore original spacing */
+    }
+
+    .container {
+        padding: 40px; /* Increase spacing around content */
+    }
+
+    .text {
+        flex-basis: 50%; /* Take half width on larger screens */
+    }
+}
+
+
+
+
+
+
